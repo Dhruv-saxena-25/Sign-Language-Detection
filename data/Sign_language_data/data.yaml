@@ -1,5 +1,5 @@
-train:  ../data\Sign_language_data\train
-test: ../data\Sign_language_data\test
+train:  ../train/images
+test: ../test/images
 
 nc: 6
 
