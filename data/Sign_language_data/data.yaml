@@ -1,0 +1,7 @@
+train:  ../data\Sign_language_data\train
+test: ../data\Sign_language_data\test
+
+nc: 6
+
+names: ['Hello', 'I Love You', 'No', 'Please', 'Thanks', 'Yes']
+

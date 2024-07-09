@@ -51,6 +51,15 @@ coverage.xml
 .pytest_cache/
 cover/
 
+
+# Data (Images)
+.Sign_data/*
+.Sign_data/
+Sign_data/
+Sign_data/*
+
+
+
 # Translations
 *.mo
 *.pot
