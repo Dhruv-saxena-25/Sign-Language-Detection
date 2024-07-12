@@ -57,7 +57,8 @@ cover/
 .Sign_data/
 Sign_data/
 Sign_data/*
-
+.artifacts/*
+artifacts/*
 
 
 # Translations
