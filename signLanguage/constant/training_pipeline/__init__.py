@@ -10,8 +10,8 @@ DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 
-DATA_DOWNLOAD_URL: str = "https://github.com/Dhruv-saxena-25/Sign-Language-Detection/blob/main/data/Sign_language_data.rar"
-# DATA_DOWNLOAD_URL: str = "https://github.com/entbappy/Branching-tutorial/raw/master/Sign_language_data.zip"
+# DATA_DOWNLOAD_URL: str = "https://github.com/Dhruv-saxena-25/Sign-Language-Detection/blob/main/Sign_data.zip"
+DATA_DOWNLOAD_URL: str = "https://github.com/entbappy/Branching-tutorial/raw/master/Sign_language_data.zip"
 
 """
 Data Validation realted contant start with DATA_VALIDATION VAR NAME
