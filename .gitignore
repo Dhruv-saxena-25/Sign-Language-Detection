@@ -59,7 +59,8 @@ Sign_data/
 Sign_data/*
 .artifacts/*
 artifacts/*
-
+test
+train
 
 # Translations
 *.mo
