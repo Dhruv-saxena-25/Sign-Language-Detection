@@ -22,7 +22,7 @@ class ModelTrainer:
         try:
             logging.info("Unzipping data")
             os.system("unzip Sign_language_data.zip")
-            os.system("rm Sign_language_data.zip")
+            # os.system("rm Sign_language_data.zip")
 
             with open("data.yaml", 'r') as stream:
                 num_classes = str(yaml.safe_load(stream)['nc'])
@@ -44,9 +44,9 @@ class ModelTrainer:
             os.system(f"cp yolov5/runs/train/yolov5s_results/weights/best.pt {self.model_trainer_config.model_trainer_dir}/")
            
             os.system("rm -rf yolov5/runs")
-            os.system("rm -rf train")
-            os.system("rm -rf test")
-            os.system("rm -rf data.yaml")
+            # os.system("rm -rf train")
+            # os.system("rm -rf test")
+            # os.system("rm -rf data.yaml")
 
             model_trainer_artifact = ModelTrainerArtifact(
                 trained_model_file_path="yolov5/best.pt",
