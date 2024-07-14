@@ -61,7 +61,7 @@ Sign_data/*
 artifacts/*
 test
 train
-
+aws_keys.csv
 # Translations
 *.mo
 *.pot
