@@ -1,14 +1,11 @@
 import sys,os
+import cv2
 from signLanguage.pipeline.training_pipeline import TrainPipeline
 from signLanguage.exception import SignException
 from signLanguage.utils.main_utils import decodeImage, encodeImageIntoBase64
 from flask import Flask, request, jsonify, render_template,Response
 from flask_cors import CORS, cross_origin
 from signLanguage.constant.application import APP_HOST, APP_PORT
-# from pathlib import Path
-# import pathlib
-# temp = pathlib.PosixPath
-# pathlib.PosixPath = pathlib.WindowsPath
 
 app = Flask(__name__)
 CORS(app)
@@ -37,7 +34,7 @@ def predictRoute():
         image = request.json['image']
         decodeImage(image, clApp.filename)
 
-        os.system("cd yolov5/ && python detect.py --weights best.pt --img 416 --conf 0.5 --source ../data/inputImage.jpg")
+        os.system("cd yolov5/ && python detect.py --weights train.pt --img 416 --conf 0.5 --source ../data/inputImage.jpg")
 
         opencodedbase64 = encodeImageIntoBase64("yolov5/runs/detect/exp/inputImage.jpg")
         result = {"image": opencodedbase64.decode('utf-8')}
@@ -59,9 +56,9 @@ def predictRoute():
 @cross_origin()
 def predictLive():
     try:
-        os.system("cd yolov5/ && python detect.py --weights best.pt --img 416 --conf 0.5 --source 0")
+        os.system("cd yolov5/ && python detect.py --weights train.pt --img 416 --conf 0.5 --source 0")
         os.system("rm -rf yolov5/runs")
-        return "Camera starting!!" 
+        return "Camera Off"
         
     except ValueError as val:
         print(val)
