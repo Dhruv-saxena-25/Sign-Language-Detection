@@ -62,6 +62,7 @@ artifacts/*
 test
 train
 aws_keys.csv
+Sign-Language.mp4
 # Translations
 *.mo
 *.pot
